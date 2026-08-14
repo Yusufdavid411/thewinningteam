@@ -1,7 +1,7 @@
 const canvas = document.getElementById('flyerCanvas');
 const ctx = canvas.getContext('2d', { alpha: false });
 const flyer = new Image();
-flyer.src = 'assets/flyer.jpg';
+flyer.src = 'flyer.jpg';
 
 const photoInput = document.getElementById('photoInput');
 const downloadButton = document.getElementById('downloadButton');
