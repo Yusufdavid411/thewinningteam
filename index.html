@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#050a3a">
+  <meta name="description" content="Create your personalized The Winning Team Brothers Weekend flyer.">
+  <title>The Winning Team | Brothers Weekend</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="hero">
+      <img class="fcs-logo" src="fcs-logo.png" alt="FCS and Federal University Lokoja logos">
+      <div class="hero-copy">
+        <p class="eyebrow">FELLOWSHIP OF CHRISTIAN STUDENTS</p>
+        <h1>The Winning Team</h1>
+        <p class="subtitle">Brothers Weekend • 14th–16th August 2026</p>
+      </div>
+    </header>
+
+    <section class="intro-card">
+      <div class="intro-icon">✦</div>
+      <div>
+        <strong>Create your personal flyer</strong>
+        <p>Tap the photo area to add your picture, then enter your name.</p>
+      </div>
+    </section>
+
+    <section class="editor-card">
+      <div class="flyer-frame" id="flyerFrame">
+        <canvas id="flyerCanvas" width="1022" height="1536" aria-label="Personalized flyer preview"></canvas>
+
+        <button id="photoPrompt" class="photo-prompt" type="button">
+          <span class="upload-icon">↑</span>
+          <strong>Add your photo</strong>
+          <small>Tap to choose a picture</small>
+        </button>
+
+        <div class="name-layer">
+          <input
+            id="nameInput"
+            class="name-input"
+            type="text"
+            maxlength="24"
+            autocomplete="name"
+            placeholder="Enter your name"
+            aria-label="Your name"
+          >
+        </div>
+      </div>
+
+      <input id="photoInput" type="file" accept="image/jpeg,image/png,image/webp" hidden>
+
+      <div id="editorControls" class="adjust-panel hidden">
+        <div class="adjust-heading">
+          <div>
+            <span class="mini-label">PHOTO POSITION</span>
+            <strong>Adjust your photo</strong>
+          </div>
+          <button id="resetPosition" class="text-button" type="button">Reset</button>
+        </div>
+        <p>Drag the photo directly on the flyer. Use + and − to zoom.</p>
+
+        <div class="zoom-row">
+          <button class="round-button" id="zoomOut" type="button" aria-label="Zoom out">−</button>
+          <div class="zoom-meter"><div id="zoomFill"></div></div>
+          <button class="round-button" id="zoomIn" type="button" aria-label="Zoom in">+</button>
+        </div>
+      </div>
+
+      <button id="downloadButton" class="download-button hidden" type="button">
+        <span class="download-icon">↓</span>
+        <span>
+          <strong>Download My Flyer</strong>
+          <small>Save your finished flyer to your phone</small>
+        </span>
+      </button>
+
+      <p class="privacy-note">Your photo stays on your device while you create the flyer.</p>
+    </section>
+
+    <footer>FCSFUL • FAMILY OF LOVE • THE WINNING TEAM</footer>
+  </main>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
